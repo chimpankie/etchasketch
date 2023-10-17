@@ -10,26 +10,30 @@ function changeColor(){
     }
 }
 
-function createGrid() {
-    for (let i = 0; i<16; i++){
+function createGrid(choice) {
+    let grid = Number(choice);
+    console.log(grid)
+;    for (let i = 0; i<grid; i++){
         let row = document.createElement('div');
         row.classList.add('row');
-        createCells(row);
+        createCells(row, grid);
         etchPad.appendChild(row);
         
 
     }
 }
 
-function createCells(row) {
-    for (let i = 0; i<16; i++){
+function createCells(row, grid) {
+    for (let i = 0; i<grid; i++){
         let cell = document.createElement('div');
         cell.classList.add('cell');
-        console.log(cell.style.color); 
         row.appendChild(cell);
         let cells = document.querySelectorAll('.cell');
      
         cell.addEventListener('mouseenter', () => {
+            cell.classList.add('on');
+        })
+        cell.addEventListener('touchmove', () => {
             cell.classList.add('on');
         })
     }
@@ -39,7 +43,8 @@ let createBtn = document.querySelector('#defaultGrid');
 let resetBtn = document.querySelector('#resetGrid');
 
 createBtn.addEventListener('click', () => {
-    createGrid();
+    let choice = prompt("How large would you like your EtchPad to be? Choose between 16 and 100");
+    createGrid(choice);
 })
 
 resetBtn.addEventListener('click', () => {
