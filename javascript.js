@@ -48,3 +48,5 @@ resetBtn.addEventListener('click', () => {
         cell.classList.remove('on');
     })
 })
+
+// fork this and then experiment with the grid size
