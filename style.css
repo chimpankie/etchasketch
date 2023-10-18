@@ -1,7 +1,4 @@
 
-/*prevent scrolling on mobile to enable etchasketch to work*/
-
-
 #etchPad {
     display:inline-flex;
     flex-direction: column;

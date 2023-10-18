@@ -33,6 +33,9 @@ function createCells(row, grid) {
         cell.addEventListener('mouseenter', () => {
             cell.classList.add('on');
         })
+        cell.addEventListener('touchstart', () => {
+            cell.classList.add('on');
+        })
         cell.addEventListener('touchmove', () => {
             cell.classList.add('on');
         })
