@@ -1,12 +1,6 @@
 
 /*prevent scrolling on mobile to enable etchasketch to work*/
 
-body {
-    overflow:hidden;
-    position:fixed;
-    top:0;
-    bottom: 0;
-}
 
 #etchPad {
     display:inline-flex;
@@ -18,6 +12,7 @@ body {
     width: 800px;
     height: 800px;
 }
+
 
 .row {
     display:flex;
@@ -32,6 +27,7 @@ body {
     border-left: solid 2px black;
     border-top: solid 2px black;
     flex:auto;
+    touch-action: none;
 }
 
 .on {
