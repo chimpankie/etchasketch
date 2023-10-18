@@ -1,5 +1,12 @@
 
+/*prevent scrolling on mobile to enable etchasketch to work*/
 
+body {
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    bottom: 0;
+}
 
 #etchPad {
     display:inline-flex;
