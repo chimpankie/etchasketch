@@ -46,14 +46,15 @@ let createBtn = document.querySelector('#defaultGrid');
 let resetBtn = document.querySelector('#resetGrid');
 
 createBtn.addEventListener('click', () => {
-    let choice = prompt("How large would you like your EtchPad to be? Choose between 16 and 100");
+    let choice = prompt("How large would you like your EtchPad to be? Choose between 16 and 100", "50");
     createGrid(choice);
+    createBtn.disabled = true;
 })
 
 resetBtn.addEventListener('click', () => {
     let cells = document.querySelectorAll('div');
     cells.forEach(function (cell) {
-        cell.classList.remove('on');
+        cell.style.backgroundColor = "white";
     })
 })
 
