@@ -1,14 +1,6 @@
 let etchPad = document.querySelector('#etchPad'); 
 
 
-function changeColor(){
-    console.log('click');
-    if (cell.style.color === 'white'){
-        cell.style.color = 'black';
-    } else if (cell.style.color === 'black'){
-        cell.style.color = 'white';
-    }
-}
 
 function createGrid(choice) {
     let grid = Number(choice);
@@ -32,6 +24,9 @@ function createCells(row, grid) {
      
         cell.addEventListener('mouseenter', () => {
             cell.classList.add('on');
+            colorChoice = randomColour();
+            cell.style.backgroundColor = `${colorChoice}`;
+
         })
         cell.addEventListener('touchstart', () => {
             cell.classList.add('on');
@@ -40,6 +35,11 @@ function createCells(row, grid) {
             cell.classList.add('on');
         })
     }
+}
+
+function randomColour(){
+    let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    return color;
 }
 
 let createBtn = document.querySelector('#defaultGrid');
