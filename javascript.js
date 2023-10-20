@@ -6,10 +6,12 @@ function createGrid(choice) {
     let grid = Number(choice);
     console.log(grid)
 ;    for (let i = 0; i<grid; i++){
+        etchPad.style.display = 'inline-flex';
         let row = document.createElement('div');
         row.classList.add('row');
         createCells(row, grid);
         etchPad.appendChild(row);
+        
         
 
     }

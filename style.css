@@ -1,6 +1,6 @@
 
 #etchPad {
-    display:inline-flex;
+    display:none;
     flex-direction: column;
     justify-content: flex-start;
     border-right: solid 2px black;
