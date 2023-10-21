@@ -1,20 +1,44 @@
 
 #etchPad {
+    
     display:none;
     flex-direction: column;
     justify-content: flex-start;
     border-right: solid 2px black;
     border-bottom: solid 2px black; 
-    flex: auto;
+  
     width: 600px;
     height: 600px;
 }
 
+.etchContainer {
+    display: flex;
+    justify-content: center;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
 
+h1 {
+    font-size: xx-large;
+    font:bold;
+    font-family: 'Comic Sans MS'; 
+    text-align: center;
+    
+}
 .row {
     display:flex;
     justify-content: flex-start;
     flex: auto;
+}
+
+button {
+    font-family: 'Comic Sans MS';
+    font-size: large;
+    width: 120px;
+    height: 70px;
+   
 }
 
 .cell {

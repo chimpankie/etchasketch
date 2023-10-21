@@ -26,16 +26,19 @@ function createCells(row, grid) {
      
         cell.addEventListener('mouseenter', () => {
             cell.classList.add('on');
-            colorChoice = randomColour();
-            cell.style.backgroundColor = `${colorChoice}`;
+            if(rainbow){
+                colorChoice = randomColour();
+                cell.style.backgroundColor = `${colorChoice}`;
+            } else {
+                colorChoice = 'black';
+                cell.style.backgroundColor = colorChoice;
+
+            }
+       
+
 
         })
-        cell.addEventListener('touchstart', () => {
-            cell.classList.add('on');
-        })
-        cell.addEventListener('touchmove', () => {
-            cell.classList.add('on');
-        })
+
     }
 }
 
@@ -46,6 +49,17 @@ function randomColour(){
 
 let createBtn = document.querySelector('#defaultGrid');
 let resetBtn = document.querySelector('#resetGrid');
+let rainbowBtn = document.querySelector('#getRainbow');
+let rainbow = false;
+
+rainbowBtn.addEventListener('click', () => {
+    rainbow = !rainbow; 
+    if(rainbow){
+        rainbowBtn.textContent = 'Black Pen'}
+        else {
+            rainbowBtn.textContent = 'Technicolor!';
+        };
+})
 
 createBtn.addEventListener('click', () => {
     let choice = prompt("How large would you like your EtchPad to be? Choose between 16 and 100", "50");
