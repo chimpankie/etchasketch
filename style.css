@@ -17,7 +17,7 @@
 }
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 h1 {
@@ -33,13 +33,19 @@ h1 {
     flex: auto;
 }
 
-button {
+.btn {
     font-family: 'Comic Sans MS';
     font-size: large;
-    width: 120px;
-    height: 70px;
+    min-width: 120px;
+    min-height: 70px;
+    color:royalblue;
+    font-weight: bolder;
+  
+    
    
 }
+
+
 
 .cell {
     background-color: white;
